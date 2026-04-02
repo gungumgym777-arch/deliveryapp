@@ -14,7 +14,7 @@ public record DeliveryRequest(
         @Schema(description = "Weight in tons", example = "2.5", minimum = "0.1", maximum = "120")
         @DecimalMin("0.1")
         @DecimalMax("120")
-        double weighTon,
+        double weightTon,
 
         @Schema(description = "Type of cargo", example = "FRAGILE")
         @NotNull

@@ -9,7 +9,7 @@ public class DeliveryService {
 
     public DeliveryResponse calculate(DeliveryRequest request) {
 
-        double basePrice = request.distanceKm() * request.weighTon() * 8;
+        double basePrice = request.distanceKm() * request.weightTon() * 8;
         double urgentSurcharge = request.isUrgent() ? basePrice * 0.2 : 0;
 
         double cargoTypeSurcharge = switch (request.cargoType()) {

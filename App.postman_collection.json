@@ -1,0 +1,27 @@
+{
+  "info": {
+    "_postman_id": "870d1af0-fae9-423d-8b98-162a7fe2b31f",
+    "name": "App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48527340",
+    "_collection_link": "https://go.postman.co/collection/48527340-870d1af0-fae9-423d-8b98-162a7fe2b31f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Correct",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Test",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

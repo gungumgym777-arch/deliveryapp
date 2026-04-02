@@ -1,6 +1,7 @@
 package com.delivery_post.exception;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.lang.Contract;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -34,8 +35,18 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleOther(Exception ex) {
+
+        ex.printStackTrace();
         return ResponseEntity
                 .status(999)
                 .body(Map.of("errors", "Internal server error"));
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<?> handleInvalidJson(HttpMessageNotReadableException ex) {
+
+        return ResponseEntity
+                .badRequest()
+                .body(Map.of("error", "Invalid request body (check fields and enum values"));
     }
 }
