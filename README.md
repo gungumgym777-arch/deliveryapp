@@ -55,15 +55,16 @@ http://localhost:8080
 Через Docker (опционально)
 docker build -t delivery-post .
 docker run -p 8080:8080 delivery-post
+
 📚 Документация API
 
 Swagger UI доступен по адресу:
 
 http://localhost:8080/swagger-ui.html
-
 или
-
 http://localhost:8080/swagger-ui/index.html
+
+
 📡 API
 POST /api/delivery/calculate
 📥 Пример запроса
@@ -73,6 +74,7 @@ POST /api/delivery/calculate
 "cargoType": "FRAGILE",
 "isUrgent": true
 }
+
 📤 Пример ответа
 {
 "basePrice": 8000,
@@ -81,6 +83,7 @@ POST /api/delivery/calculate
 "totalPrice": 10400,
 "currency": "KZT"
 }
+
 📁 Структура проекта
 src/main/java/com/delivery_post/
 ├── controller/      # REST контроллеры
@@ -97,6 +100,7 @@ JAR файл появится в папке target/
 mvn test
 🧠 Архитектурный вопрос
  Что изменить, если тарифы хранить в БД и редактировать через админку?
+ 
 
 Если тарифы будут храниться в базе данных и редактироваться через административную панель, текущую реализацию 
 с захардкоженными коэффициентами в сервисе необходимо изменить. В первую очередь следует вынести тарифы в 
