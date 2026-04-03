@@ -50,6 +50,7 @@ mvn spring-boot:run
 
 
 http://localhost:8080
+
 🐳 Через Docker Compose (рекомендуемый способ)
 
 Для удобства запуска приложения используется Docker Compose.
@@ -61,6 +62,7 @@ http://localhost:8080
 docker-compose up --build
 После запуска приложение будет доступно по адресу:
 http://localhost:8080
+
 🐳 Через Docker (альтернатива)
 docker build -t delivery-post .
 docker run -p 8080:8080 delivery-post
