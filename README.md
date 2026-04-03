@@ -83,6 +83,7 @@ http://localhost:8080/swagger-ui/index.html
 
 📡 API
 POST /api/delivery/calculate
+
 📥 Пример запроса
 {
 "distanceKm": 100,
@@ -101,20 +102,31 @@ POST /api/delivery/calculate
 }
 
 📁 Структура проекта
+
 src/main/java/com/delivery_post/
+
 ├── controller/      # REST контроллеры
+
 ├── service/         # Бизнес-логика
+
 ├── model/           # DTO модели
+
 ├── exception/       # Обработка ошибок
+
 ├── configuration/   # Конфигурации (Swagger и др.)
+
 🏗 Сборка проекта
+
 mvn clean package
 
 JAR файл появится в папке target/
 
 🧪 Тестирование
+
 mvn test
+
 🧠 Архитектурный вопрос
+
  Что изменить, если тарифы хранить в БД и редактировать через админку?
  
 
