@@ -10,16 +10,60 @@
     {
       "name": "Correct",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"distanceKm\": 100,\n  \"weightTon\": 10,\n  \"cargoType\": \"FRAGILE\",\n  \"isUrgent\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/delivery/calculate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "delivery",
+            "calculate"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Test",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"distanceKm\": 2999999999,\n  \"weightTon\": 10,\n  \"cargoType\": \"FRAGILE\",\n  \"isUrgent\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/delivery/calculate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "delivery",
+            "calculate"
+          ]
+        }
       },
       "response": []
     }
